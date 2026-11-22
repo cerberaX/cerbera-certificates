@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cerbera — Certificate Verification Portal</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="liquid-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <main class="portal-container no-print">
+    <header class="glass-panel header-bar">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Cerbera Logo" class="brand-logo" onerror="this.style.display='none'">
+        <div>
+          <span class="brand-title">CERBERA</span>
+          <span class="brand-sub">CRYPTOGRAPHIC VERIFICATION SYSTEM</span>
+        </div>
+      </div>
+      <div class="crypto-pill">
+        <span class="pulse-dot"></span>
+        <span>Ed25519 Verified</span>
+      </div>
+    </header>
+
+    <section class="glass-panel search-card">
+      <h1>Sertifikat Haqiqiyligini Tekshirish</h1>
+      <p class="subtitle">Sertifikat ID raqamini kiriting yoki hujjatdagi QR-kodni skanerlang.</p>
+
+      <form id="verify-form" class="search-form">
+        <div class="input-glass-wrap">
+          <input
+            type="text"
+            id="cert-id-input"
+            placeholder="Masalan: CER-PT-2026-001"
+            autocomplete="off"
+            spellcheck="false"
+            required
+          />
+        </div>
+        <button type="submit" class="liquid-btn primary-btn">
+          <span>Tekshirish</span>
+          <div class="btn-shine"></div>
+        </button>
+      </form>
+    </section>
+
+    <section id="error-box" class="glass-panel error-card hidden">
+      <div class="error-icon">✕</div>
+      <h3 id="error-title">Sertifikat topilmadi</h3>
+      <p id="error-desc">Kiritilgan ID bo‘yicha bazada ma’lumot mavjud emas.</p>
+    </section>
+
+    <section id="result-wrapper" class="hidden">
+      <div class="glass-panel status-banner" id="status-banner">
+        <div class="status-left">
+          <div class="status-badge" id="status-badge">VERIFIED & ACTIVE</div>
+          <div class="crypto-hash" id="crypto-status">Ed25519 Digital Signature: VALID</div>
+        </div>
+        <div class="status-actions">
+          <button id="copy-link-btn" class="liquid-btn secondary-btn">
+            <span>Havolani nusxalash</span>
+          </button>
+          <button id="print-pdf-btn" class="liquid-btn primary-btn">
+            <span>PDF Yuklab olish</span>
+            <div class="btn-shine"></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="cert-stage">
+        <div class="certificate-sheet" id="certificate-sheet">
+          <div class="cert-border-outer">
+            <div class="cert-border-inner">
+              <div class="cert-watermark">CERBERA</div>
+
+              <div class="cert-header">
+                <div class="cert-issuer-block">
+                  <img src="assets/logo.png" alt="Logo" class="cert-logo" onerror="this.style.display='none'">
+                  <div>
+                    <div class="cert-org">CERBERA SECURITY</div>
+                    <div class="cert-dept">OFFENSIVE SECURITY & PENETRATION TESTING</div>
+                  </div>
+                </div>
+                <div class="cert-id-box">
+                  <span class="meta-label">CREDENTIAL ID</span>
+                  <span class="meta-val mono" id="c-id">CER-PT-2026-001</span>
+                </div>
+              </div>
+
+              <div class="cert-body">
+                <div class="cert-kicker">CERTIFICATE OF ACHIEVEMENT</div>
+                <p class="cert-presents">Ushbu sertifikat quyidagi mutaxassisga taqdim etiladi:</p>
+                <h2 class="cert-holder" id="c-holder">Ism Familiya</h2>
+                <p class="cert-statement">
+                  amaliy kiberxavfsizlik va tizimlar zaifliklarini aniqlash bo‘yicha <strong id="c-hours">180</strong> soatlik intensiv dasturni hamda yakuniy amaliy imtihonni muvaffaqiyatli yakunlagani uchun:
+                </p>
+                <div class="cert-program" id="c-program">Certified Junior Penetration Tester (CJPT)</div>
+
+                <div class="cert-skills-box">
+                  <div class="skills-title">TASDIQLANGAN AMALIY KO‘NIKMALAR (VERIFIED SCOPE)</div>
+                  <ul class="skills-list" id="c-skills"></ul>
+                </div>
+              </div>
+
+              <div class="cert-footer">
+                <div class="cert-meta-col">
+                  <div class="meta-row">
+                    <span class="meta-label">BERILGAN SANA:</span>
+                    <span class="meta-val mono" id="c-date">2026-11-20</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">YAKUNIY NATIJA:</span>
+                    <span class="meta-val mono" id="c-grade">96/100</span>
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">CAPSTONE LAB:</span>
+                    <span class="meta-val" id="c-capstone">Enterprise AD Lab</span>
+                  </div>
+                </div>
+
+                <div class="cert-sign-col">
+                  <div class="sign-script" id="c-instructor-sign">Javohir Jalolov</div>
+                  <div class="sign-line"></div>
+                  <div class="sign-name" id="c-instructor">Javohir Jalolov</div>
+                  <div class="sign-role" id="c-instructor-title">Lead Penetration Tester</div>
+                </div>
+
+                <div class="cert-qr-col">
+                  <div id="qrcode" class="qr-frame"></div>
+                  <span class="qr-caption">verify.cerbera.uz</span>
+                </div>
+              </div>
+
+              <div class="cert-crypto-strip mono">
+                <span>Ed25519 SIG: <span id="c-sig-preview">...</span></span>
+                <span>VERIFICATION: https://cerbera.uz</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

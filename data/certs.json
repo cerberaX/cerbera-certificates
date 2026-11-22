@@ -1,0 +1,62 @@
+{
+  "issuer": "Cerbera Security Academy",
+  "instructor": "Javohir Jalolov",
+  "instructorTitle": "Lead Penetration Tester & Founder",
+  "publicKey": "U06x9j5DldJgXWwRIR9ya3uFIkPnJvaHGZUaUCkPpWw=",
+  "certificates": [
+    {
+      "id": "CER-PT-2026-2647",
+      "holder": "Soliyev Marufjon",
+      "program": "Certified Junior Penetration Tester (CJPT)",
+      "issueDate": "2026-11-20",
+      "hours": "180",
+      "grade": "96/100 (Distinction)",
+      "status": "ACTIVE",
+      "capstone": "Enterprise Active Directory & Web Exploitation Lab",
+      "skills": [
+        "Web Application Pentesting (OWASP Top 10)",
+        "Network Reconnaissance & Enumeration",
+        "Privilege Escalation (Linux & Windows)",
+        "Active Directory Exploitation",
+        "Vulnerability Assessment & Executive Reporting"
+      ],
+      "signature": "M5TpOuGNuw+UL24040KL18dKdOL39Iv8o6xrKa4jU/6AjAK5C+mNU+RoBMt2t5lo3o/n3uQFqNK0i+9GWSFLCA=="
+    },
+    {
+      "id": "CER-PT-2026-7895",
+      "holder": "Baxranov Nurmuhammad",
+      "program": "Certified Junior Penetration Tester (CJPT)",
+      "issueDate": "2026-11-20",
+      "hours": "180",
+      "grade": "92/100 (Merit)",
+      "status": "ACTIVE",
+      "capstone": "Full-Scope Black-Box Web & API Security Audit",
+      "skills": [
+        "Web Application Pentesting (OWASP Top 10)",
+        "Network Reconnaissance & Enumeration",
+        "Privilege Escalation (Linux & Windows)",
+        "API Security & Authentication Bypass",
+        "Vulnerability Assessment & Executive Reporting"
+      ],
+      "signature": "eyVz8/xKbVZvX6J1zFdcc093GY+a42yIXjnp7eqIaarnkQ/kkJKgZLOgoEVLPkXwrJJNuXPwqHOO/eZ6c4wnBw=="
+    },
+    {
+      "id": "CER-PT-2026-5681",
+      "holder": "Jurabekova Farzona",
+      "program": "Certified Junior Penetration Tester (CJPT)",
+      "issueDate": "2026-11-20",
+      "hours": "180",
+      "grade": "94/100 (Distinction)",
+      "status": "ACTIVE",
+      "capstone": "Internal Network Pivoting & Post-Exploitation",
+      "skills": [
+        "Web Application Pentesting (OWASP Top 10)",
+        "Network Reconnaissance & Enumeration",
+        "Privilege Escalation (Linux & Windows)",
+        "Network Pivoting & Tunneling",
+        "Vulnerability Assessment & Executive Reporting"
+      ],
+      "signature": "SksIrPTp26Nogf+AnGDbGuXRp+buSXt/Dqe2txnZ1ACdGcHsFhf4WNIdbcYBLWgSXeHl+0JgfyRAChbYFcGTAw=="
+    }
+  ]
+}

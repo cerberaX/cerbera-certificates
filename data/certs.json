@@ -10,7 +10,7 @@
       "program": "Certified Junior Penetration Tester (CJPT)",
       "issueDate": "2026-11-20",
       "hours": "180",
-      "grade": "96/100 (Distinction)",
+      "grade": "70/100",
       "status": "ACTIVE",
       "capstone": "Enterprise Active Directory & Web Exploitation Lab",
       "skills": [
@@ -20,7 +20,7 @@
         "Active Directory Exploitation",
         "Vulnerability Assessment & Executive Reporting"
       ],
-      "signature": "M5TpOuGNuw+UL24040KL18dKdOL39Iv8o6xrKa4jU/6AjAK5C+mNU+RoBMt2t5lo3o/n3uQFqNK0i+9GWSFLCA=="
+      "signature": "IV1lasaC3s0heyV8xoWsggu+1ntoAIom+6rxZZhoUIxD4BhKErV7DVi4TzFx/YFTdTHMT//Kx0lUiy7cwl2/Aw=="
     },
     {
       "id": "CER-PT-2026-7895",
@@ -28,7 +28,7 @@
       "program": "Certified Junior Penetration Tester (CJPT)",
       "issueDate": "2026-11-20",
       "hours": "180",
-      "grade": "92/100 (Merit)",
+      "grade": "0/100",
       "status": "ACTIVE",
       "capstone": "Full-Scope Black-Box Web & API Security Audit",
       "skills": [
@@ -38,7 +38,7 @@
         "API Security & Authentication Bypass",
         "Vulnerability Assessment & Executive Reporting"
       ],
-      "signature": "eyVz8/xKbVZvX6J1zFdcc093GY+a42yIXjnp7eqIaarnkQ/kkJKgZLOgoEVLPkXwrJJNuXPwqHOO/eZ6c4wnBw=="
+      "signature": "Rn/kk4Tot6UbARBUPmjgCszzUEM7/8y9CHG3A843jWOkxDP5RRN5hiXyBJs6F+vmxtteLq0KMCXXGGdOL4kaBA=="
     },
     {
       "id": "CER-PT-2026-5681",
@@ -46,7 +46,7 @@
       "program": "Certified Junior Penetration Tester (CJPT)",
       "issueDate": "2026-11-20",
       "hours": "180",
-      "grade": "94/100 (Distinction)",
+      "grade": "25/100",
       "status": "ACTIVE",
       "capstone": "Internal Network Pivoting & Post-Exploitation",
       "skills": [
@@ -56,7 +56,7 @@
         "Network Pivoting & Tunneling",
         "Vulnerability Assessment & Executive Reporting"
       ],
-      "signature": "SksIrPTp26Nogf+AnGDbGuXRp+buSXt/Dqe2txnZ1ACdGcHsFhf4WNIdbcYBLWgSXeHl+0JgfyRAChbYFcGTAw=="
+      "signature": "YBaY2rrof9rWgOcUCvGWI2jzoz/uN1cnC3mmbdT28JL1VGr7RFmaWEnP3q3m8pCssycQpbPLh1nno1UHew6lBA=="
     }
   ]
 }

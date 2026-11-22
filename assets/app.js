@@ -74,25 +74,15 @@ function showError(title, desc) {
   errBox.classList.remove('hidden');
 }
 
-function renderQRCode(container, urlText) {
-  container.innerHTML = '';
-  if (typeof QRCode !== 'undefined') {
-    new QRCode(container, {
-      text: urlText,
-      width: 78,
-      height: 78,
-      colorDark: '#07090f',
-      colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.M
-    });
-  } else {
-    const img = document.createElement('img');
-    img.src = `https://qrserver.com{encodeURIComponent(urlText)}`;
-    img.alt = 'Verification QR';
-    img.style.width = '78px';
-    img.style.height = '78px';
-    container.appendChild(img);
-  }
+function renderQRCode(container) {
+  container.innerHTML = "";
+  const img = document.createElement("img");
+  img.src = "./assets/qr.png";
+  img.alt = "Cerbera Verification QR";
+  img.style.width = "78px";
+  img.style.height = "78px";
+  img.style.display = "block";
+  container.appendChild(img);
 }
 
 async function lookupCertificate(rawId) {
